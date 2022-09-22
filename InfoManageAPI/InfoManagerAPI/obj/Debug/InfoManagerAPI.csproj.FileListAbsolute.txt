@@ -1,0 +1,34 @@
+Z:\Новая папка\ДОВОСТРЕБОВАНИЯ\Бондаренко\ПРОГРАММЫ\INFO_MANAGER\InfoManagerAPI\bin\Debug\InfoManagerAPI.exe.config
+Z:\Новая папка\ДОВОСТРЕБОВАНИЯ\Бондаренко\ПРОГРАММЫ\INFO_MANAGER\InfoManagerAPI\bin\Debug\InfoManagerAPI.exe
+Z:\Новая папка\ДОВОСТРЕБОВАНИЯ\Бондаренко\ПРОГРАММЫ\INFO_MANAGER\InfoManagerAPI\bin\Debug\InfoManagerAPI.pdb
+Z:\Новая папка\ДОВОСТРЕБОВАНИЯ\Бондаренко\ПРОГРАММЫ\INFO_MANAGER\InfoManagerAPI\bin\Debug\FirebirdSql.Data.FirebirdClient.dll
+Z:\Новая папка\ДОВОСТРЕБОВАНИЯ\Бондаренко\ПРОГРАММЫ\INFO_MANAGER\InfoManagerAPI\bin\Debug\Newtonsoft.Json.dll
+Z:\Новая папка\ДОВОСТРЕБОВАНИЯ\Бондаренко\ПРОГРАММЫ\INFO_MANAGER\InfoManagerAPI\obj\Debug\InfoManagerAPI.csprojResolveAssemblyReference.cache
+Z:\Новая папка\ДОВОСТРЕБОВАНИЯ\Бондаренко\ПРОГРАММЫ\INFO_MANAGER\InfoManagerAPI\obj\Debug\InfoManagerAPI.csproj.CoreCompileInputs.cache
+Z:\Новая папка\ДОВОСТРЕБОВАНИЯ\Бондаренко\ПРОГРАММЫ\INFO_MANAGER\InfoManagerAPI\obj\Debug\InfoManagerAPI.csproj.CopyComplete
+Z:\Новая папка\ДОВОСТРЕБОВАНИЯ\Бондаренко\ПРОГРАММЫ\INFO_MANAGER\InfoManagerAPI\obj\Debug\InfoManagerAPI.exe
+Z:\Новая папка\ДОВОСТРЕБОВАНИЯ\Бондаренко\ПРОГРАММЫ\INFO_MANAGER\InfoManagerAPI\obj\Debug\InfoManagerAPI.pdb
+D:\Work\Sharp\InfoManageAPI\InfoManagerAPI\obj\Debug\InfoManagerAPI.csproj.CoreCompileInputs.cache
+D:\Work\Sharp\InfoManageAPI\InfoManagerAPI\obj\Debug\InfoManagerAPI.exe
+D:\Work\Sharp\InfoManageAPI\InfoManagerAPI\obj\Debug\InfoManagerAPI.pdb
+D:\Work\Sharp\InfoManageAPI\InfoManagerAPI\bin\Debug\InfoManagerAPI.exe.config
+D:\Work\Sharp\InfoManageAPI\InfoManagerAPI\bin\Debug\InfoManagerAPI.exe
+D:\Work\Sharp\InfoManageAPI\InfoManagerAPI\bin\Debug\InfoManagerAPI.pdb
+D:\Work\Sharp\InfoManageAPI\InfoManagerAPI\bin\Debug\InfoMAPI.dll
+D:\Work\Sharp\InfoManageAPI\InfoManagerAPI\bin\Debug\Newtonsoft.Json.dll
+D:\Work\Sharp\InfoManageAPI\InfoManagerAPI\bin\Debug\InfoMAPI.pdb
+D:\Work\Sharp\InfoManageAPI\InfoManagerAPI\obj\Debug\InfoManagerAPI.csproj.CopyComplete
+D:\Work\Sharp\InfoManageAPI\InfoManagerAPI\bin\Debug\FirebirdSql.Data.FirebirdClient.dll
+D:\Work\Sharp\InfoManageAPI\InfoManagerAPI\obj\Debug\InfoManagerAPI.csprojAssemblyReference.cache
+D:\Python\djangoReactProject\InfoManageAPI\InfoManagerAPI\bin\Debug\InfoManagerAPI.exe.config
+D:\Python\djangoReactProject\InfoManageAPI\InfoManagerAPI\bin\Debug\InfoManagerAPI.exe
+D:\Python\djangoReactProject\InfoManageAPI\InfoManagerAPI\bin\Debug\InfoManagerAPI.pdb
+D:\Python\djangoReactProject\InfoManageAPI\InfoManagerAPI\bin\Debug\InfoMAPI.dll
+D:\Python\djangoReactProject\InfoManageAPI\InfoManagerAPI\bin\Debug\FirebirdSql.Data.FirebirdClient.dll
+D:\Python\djangoReactProject\InfoManageAPI\InfoManagerAPI\bin\Debug\Newtonsoft.Json.dll
+D:\Python\djangoReactProject\InfoManageAPI\InfoManagerAPI\bin\Debug\InfoMAPI.pdb
+D:\Python\djangoReactProject\InfoManageAPI\InfoManagerAPI\obj\Debug\InfoManagerAPI.csproj.AssemblyReference.cache
+D:\Python\djangoReactProject\InfoManageAPI\InfoManagerAPI\obj\Debug\InfoManagerAPI.csproj.CoreCompileInputs.cache
+D:\Python\djangoReactProject\InfoManageAPI\InfoManagerAPI\obj\Debug\InfoManagerAPI.csproj.CopyComplete
+D:\Python\djangoReactProject\InfoManageAPI\InfoManagerAPI\obj\Debug\InfoManagerAPI.exe
+D:\Python\djangoReactProject\InfoManageAPI\InfoManagerAPI\obj\Debug\InfoManagerAPI.pdb

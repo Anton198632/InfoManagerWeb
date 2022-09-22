@@ -1,0 +1,8 @@
+.date-picker-input{
+   
+    text-align: center;
+}
+
+.daterangepicker td.active, .daterangepicker td.active:hover {
+    background-color: #15970987;
+}

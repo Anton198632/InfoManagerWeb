@@ -1,0 +1,25 @@
+.modal-body {
+    text-align: left;
+}
+
+.error {
+    color: red;
+    font-size: 0.8em;
+    margin-left: 1em;
+}
+
+textarea.form-control{
+    height: 10em;
+}
+
+.modal-body label {
+    margin-top: 1em;
+}
+
+.modal-footer{
+    justify-content: space-between;
+}
+
+.btn-success{
+    margin-right: 0.4em;
+}

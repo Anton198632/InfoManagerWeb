@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfoManagerAPI", "InfoManagerAPI\InfoManagerAPI.csproj", "{79F9137A-46F2-48CA-B8A3-DA3D59BB35A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfoMAPI", "InfoMAPI\InfoMAPI.csproj", "{FA762B69-E359-4CBF-BD7B-0C5AFF47DB08}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{79F9137A-46F2-48CA-B8A3-DA3D59BB35A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79F9137A-46F2-48CA-B8A3-DA3D59BB35A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79F9137A-46F2-48CA-B8A3-DA3D59BB35A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79F9137A-46F2-48CA-B8A3-DA3D59BB35A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA762B69-E359-4CBF-BD7B-0C5AFF47DB08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA762B69-E359-4CBF-BD7B-0C5AFF47DB08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA762B69-E359-4CBF-BD7B-0C5AFF47DB08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA762B69-E359-4CBF-BD7B-0C5AFF47DB08}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3ACB47E5-15C1-4E6E-A3F4-E0EB3C402C3A}
+	EndGlobalSection
+EndGlobal

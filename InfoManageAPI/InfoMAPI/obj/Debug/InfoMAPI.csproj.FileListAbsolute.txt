@@ -1,0 +1,17 @@
+D:\Work\Sharp\InfoManageAPI\InfoMAPI\bin\Debug\InfoMAPI.dll
+D:\Work\Sharp\InfoManageAPI\InfoMAPI\bin\Debug\InfoMAPI.pdb
+D:\Work\Sharp\InfoManageAPI\InfoMAPI\bin\Debug\FirebirdSql.Data.FirebirdClient.dll
+D:\Work\Sharp\InfoManageAPI\InfoMAPI\bin\Debug\Newtonsoft.Json.dll
+D:\Work\Sharp\InfoManageAPI\InfoMAPI\obj\Debug\InfoMAPI.csproj.CoreCompileInputs.cache
+D:\Work\Sharp\InfoManageAPI\InfoMAPI\obj\Debug\InfoMAPI.csproj.CopyComplete
+D:\Work\Sharp\InfoManageAPI\InfoMAPI\obj\Debug\InfoMAPI.dll
+D:\Work\Sharp\InfoManageAPI\InfoMAPI\obj\Debug\InfoMAPI.pdb
+D:\Python\djangoReactProject\InfoManageAPI\InfoMAPI\bin\Debug\InfoMAPI.dll
+D:\Python\djangoReactProject\InfoManageAPI\InfoMAPI\bin\Debug\InfoMAPI.pdb
+D:\Python\djangoReactProject\InfoManageAPI\InfoMAPI\bin\Debug\FirebirdSql.Data.FirebirdClient.dll
+D:\Python\djangoReactProject\InfoManageAPI\InfoMAPI\bin\Debug\Newtonsoft.Json.dll
+D:\Python\djangoReactProject\InfoManageAPI\InfoMAPI\obj\Debug\InfoMAPI.csproj.AssemblyReference.cache
+D:\Python\djangoReactProject\InfoManageAPI\InfoMAPI\obj\Debug\InfoMAPI.csproj.CoreCompileInputs.cache
+D:\Python\djangoReactProject\InfoManageAPI\InfoMAPI\obj\Debug\InfoMAPI.csproj.CopyComplete
+D:\Python\djangoReactProject\InfoManageAPI\InfoMAPI\obj\Debug\InfoMAPI.dll
+D:\Python\djangoReactProject\InfoManageAPI\InfoMAPI\obj\Debug\InfoMAPI.pdb

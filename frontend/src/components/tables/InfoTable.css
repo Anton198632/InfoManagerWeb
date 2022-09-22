@@ -1,0 +1,27 @@
+.notice {
+    width: 100%;
+    border: none;
+    background: transparent;
+}
+
+.notice:focus{
+    outline: none;
+}
+
+th, td{
+    cursor: pointer;
+}
+
+th img {
+    margin-left: 8px;
+}
+
+.header {
+    position: sticky;
+    top:0;
+}
+
+.tb-header {
+    border-width: 0px; 
+    background: white
+}
