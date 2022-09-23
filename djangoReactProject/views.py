@@ -4,6 +4,9 @@ import json
 import os
 import zipfile
 
+from asgiref.sync import sync_to_async, async_to_sync
+from channels.generic.websocket import AsyncJsonWebsocketConsumer
+from channels.layers import get_channel_layer
 from django.core.files.base import ContentFile
 from django.views.decorators.csrf import csrf_protect, csrf_exempt
 
@@ -53,11 +56,16 @@ def deleteInformationHandler(request):
     data = deleteInformation(key)
     return JsonResponse({'data': data})
 
-
+@sync_to_async
 @csrf_exempt
-def addNewInformationHandler(request):
+@async_to_sync
+async def addNewInformationHandler(request):
+
     info_data = request.body
     result = addNewInfo(info_data.decode('utf-8'))
+
+    await Consumer.broadcast_message(result)
+
     return JsonResponse({'key': result})
 
 
@@ -109,3 +117,50 @@ def getAttachmentHandler(request):
     return response
 
 
+
+class Consumer(AsyncJsonWebsocketConsumer):
+    __SERVICE = 'service'
+    __RESPONSE_TEMPLATE = ''
+
+    @classmethod
+    async def broadcast_message(cls, message: str):
+
+        layer = get_channel_layer()
+        groups = layer.groups
+        for gr in groups:
+            if gr == 'room_2':
+                await layer.group_send(gr, {  # 'room_2'
+                    'type': 'send_message',
+                    'event': message,
+                })
+
+    async def connect(self):
+        self.room_name = self.scope['url_route']['kwargs']['room_code']
+        self.room_group_name = 'room_%s' % self.room_name
+
+        await self.channel_layer.group_add(
+            self.room_group_name,
+            self.channel_name
+        )
+        await self.accept()
+
+    async def disconnect(self, close_code):
+        await self.channel_layer.group_discard(
+            self.room_group_name,
+            self.channel_name
+        )
+
+    async def receive(self, text_data):
+        response = json.loads(text_data)
+        event = response.get("event", None)
+        if event == 'START':
+            await self.__create_response_async('Соединение с сервером - OK')
+
+    async def send_message(self, res):
+        await self.send(text_data=json.dumps({
+            "event": res,
+        }))
+
+    async def __create_response_async(self, text):
+        response = text
+        await Consumer.broadcast_message(response)

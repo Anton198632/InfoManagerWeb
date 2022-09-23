@@ -15,6 +15,8 @@ urlpatterns = [
     path('addNewInformation', views.addNewInformationHandler),
     path('uploadFiles', views.uploadFilesHandler),
     path('getAttachment', views.getAttachmentHandler),
-    path('deleteInformation', views.deleteInformationHandler)
+    path('deleteInformation', views.deleteInformationHandler),
+
+
 
 ]

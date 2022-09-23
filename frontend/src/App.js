@@ -26,7 +26,8 @@ import * as Names from './settings/consts';
 
 
 
-function App() {
+
+function App(props) {
 
   const [showModal, setShowModal] = useState(false);
   const [editInfo, setEditInfo] = useState(null);
@@ -36,10 +37,15 @@ function App() {
   const {getInfoList, getInfoByWord, getInfoData, process, setProcess} = useInfoManagerService();
   const dispatch = useDispatch();
 
+  
+  
+  //const {connect} = useWebSocketService(addNewInfoToList);
+
   useEffect(() => {  
     refreshInfoList();
-
-  }, [])
+    props.websocketConnect();
+    props.setMessageHandler(addNewInfoToList);
+  }, [])   
 
   const search = (word, period) => {
     getInfoByWord(word, period).then(data=>{
@@ -52,7 +58,18 @@ function App() {
     }).catch(error=>{
       console.log(error);
     });
+  }  
+  
+  const addNewInfoToList = (newKey) => {
+
+    const period = document.querySelector("#period").value;
+    const word = document.querySelector("#search-text").value;
+    
+  
+    if (newKey)
+        console.log(word, period, newKey);
   }
+
 
 
   const refreshInfoList = () => {

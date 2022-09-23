@@ -56,8 +56,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'corsheaders'
+    'corsheaders',
+    'channels',
 ]
+
+CHANNEL_LAYERS = {
+    'default': {
+        "BACKEND": "channels.layers.InMemoryChannelLayer"
+    },
+}
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -90,8 +98,8 @@ TEMPLATES = [
 
 STATICFILES_DIRS = [BASE_DIR / 'frontend/build/static']
 
-WSGI_APPLICATION = 'djangoReactProject.wsgi.application'
-
+# WSGI_APPLICATION = 'djangoReactProject.wsgi.application'
+ASGI_APPLICATION = 'djangoReactProject.asgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases

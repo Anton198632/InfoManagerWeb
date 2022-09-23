@@ -32,3 +32,15 @@ D:\Python\djangoReactProject\InfoManageAPI\InfoManagerAPI\obj\Debug\InfoManagerA
 D:\Python\djangoReactProject\InfoManageAPI\InfoManagerAPI\obj\Debug\InfoManagerAPI.csproj.CopyComplete
 D:\Python\djangoReactProject\InfoManageAPI\InfoManagerAPI\obj\Debug\InfoManagerAPI.exe
 D:\Python\djangoReactProject\InfoManageAPI\InfoManagerAPI\obj\Debug\InfoManagerAPI.pdb
+D:\Python\InfoManagerWeb (Django,React,Sharp)\InfoManageAPI\InfoManagerAPI\bin\Debug\InfoManagerAPI.exe.config
+D:\Python\InfoManagerWeb (Django,React,Sharp)\InfoManageAPI\InfoManagerAPI\bin\Debug\InfoManagerAPI.exe
+D:\Python\InfoManagerWeb (Django,React,Sharp)\InfoManageAPI\InfoManagerAPI\bin\Debug\InfoManagerAPI.pdb
+D:\Python\InfoManagerWeb (Django,React,Sharp)\InfoManageAPI\InfoManagerAPI\bin\Debug\InfoMAPI.dll
+D:\Python\InfoManagerWeb (Django,React,Sharp)\InfoManageAPI\InfoManagerAPI\bin\Debug\FirebirdSql.Data.FirebirdClient.dll
+D:\Python\InfoManagerWeb (Django,React,Sharp)\InfoManageAPI\InfoManagerAPI\bin\Debug\Newtonsoft.Json.dll
+D:\Python\InfoManagerWeb (Django,React,Sharp)\InfoManageAPI\InfoManagerAPI\bin\Debug\InfoMAPI.pdb
+D:\Python\InfoManagerWeb (Django,React,Sharp)\InfoManageAPI\InfoManagerAPI\obj\Debug\InfoManagerAPI.csproj.AssemblyReference.cache
+D:\Python\InfoManagerWeb (Django,React,Sharp)\InfoManageAPI\InfoManagerAPI\obj\Debug\InfoManagerAPI.csproj.CoreCompileInputs.cache
+D:\Python\InfoManagerWeb (Django,React,Sharp)\InfoManageAPI\InfoManagerAPI\obj\Debug\InfoManagerAPI.csproj.CopyComplete
+D:\Python\InfoManagerWeb (Django,React,Sharp)\InfoManageAPI\InfoManagerAPI\obj\Debug\InfoManagerAPI.exe
+D:\Python\InfoManagerWeb (Django,React,Sharp)\InfoManageAPI\InfoManagerAPI\obj\Debug\InfoManagerAPI.pdb

@@ -74,15 +74,17 @@ namespace InfoMAPI.Database
             return Models.TabMain.ToJSON(result);
         }
 
-        public static String GetInfoListByWorld(string word, string period, int count, int offset)
+        public static String GetInfoListByWorld(string word, string period, int count, int offset, int key = -1)
         {
             string from = period.Split(new string[] { " - " }, StringSplitOptions.None)[0];
             string to = period.Split(new string[] { " - " }, StringSplitOptions.None)[1];
 
             FbCommand fbCommand = new FbCommand();
             fbCommand.Connection = GetConnection();
+            string byKey = key != -1 ? ("and T_INKEY='" + key.ToString() + "'") : "";
             fbCommand.CommandText = $@"select T_INKEY, DATE_TIME, SOURCE_TYPE, T_OPERATOR, TEMA, OFFER, PRIMECHANIE, IS_SUCSESS, DEST from TAB_MAIN
-                                        where DATA like '%{word}%' and (DATE_TIME between '{from}' and '{to}')
+                                        where DATA like '%{word}%' and (DATE_TIME between '{from} 0:00:00' and '{to} 23:59:59')
+                                        {byKey}
                                         order by T_INKEY rows {offset} to {offset + count}";
 
             FbDataReader dr = fbCommand.ExecuteReader();

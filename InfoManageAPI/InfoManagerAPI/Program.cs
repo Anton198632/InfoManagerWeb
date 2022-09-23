@@ -12,7 +12,7 @@ namespace InfoManagerAPI
     {
         static void Main(string[] args)
         {
-            new InfoMAPI.Database.DBHelper("localhost", @"d:\Python\djangoReactProject\info_base_v2.ib");
+            new InfoMAPI.Database.DBHelper("localhost", @"d:\Python\InfoManagerWeb (Django,React,Sharp)\info_base_v2.ib");
             //String infoListJson = InfoMAPI.Database.DBHelper.GetInfoList(100, 1);
             //string data = InfoMAPI.Database.DBHelper.GetInfoData(2);
             //string data = InfoMAPI.Database.DBHelper.GetInfoListByWorld("пользо", "15.09.2022 - 16.09.2022", 100, 1);
@@ -31,7 +31,9 @@ namespace InfoManagerAPI
 
             //var attach = InfoMAPI.Database.DBHelper.GetAttachment("1");
 
-            InfoMAPI.Database.DBHelper.UpdateNotice("11", "Hello, WORLD!!!");
+            //InfoMAPI.Database.DBHelper.UpdateNotice("11", "Hello, WORLD!!!");
+
+            string data = InfoMAPI.Database.DBHelper.GetInfoListByWorld(",,,,", "22.09.2022 - 23.09.2022", 100, 1, 42);
         }
     }
 }
