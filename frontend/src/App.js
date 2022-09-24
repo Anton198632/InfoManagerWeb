@@ -24,6 +24,7 @@ import { ModalWindow } from './components/modal-window/ModalWindow';
 import * as Names from './settings/consts';
 
 
+import {useWebSocketService} from './services/WebSocketService'
 
 
 
@@ -37,23 +38,25 @@ function App(props) {
   const {getInfoList, getInfoByWord, getInfoData, process, setProcess} = useInfoManagerService();
   const dispatch = useDispatch();
 
+  const {connect, setMessageHandler} = useWebSocketService();
+
   
   
   //const {connect} = useWebSocketService(addNewInfoToList);
 
   useEffect(() => {  
     refreshInfoList();
-    props.websocketConnect();
-    props.setMessageHandler(addNewInfoToList);
+    connect();
+    setMessageHandler(addNewInfoToList);
   }, [])   
 
-  const search = (word, period) => {
-    getInfoByWord(word, period).then(data=>{
+  const search = (word, period, key, stateType) => {
+    getInfoByWord(word, period, key, stateType).then(data=>{
       dispatch(updateInfoList(data.data))
 
       setTimeout(()=> {
         setProcess(`confirmed_infoList`);
-      }, 1000)
+      }, 300) // 1000
 
     }).catch(error=>{
       console.log(error);
@@ -64,25 +67,32 @@ function App(props) {
 
     const period = document.querySelector("#period").value;
     const word = document.querySelector("#search-text").value;
-    
-  
     if (newKey)
-        console.log(word, period, newKey);
+    {
+        refreshInfoList();
+        search(word, period, -1, '');
+    }
   }
 
 
 
   const refreshInfoList = () => {
-    getInfoList().then(data=>{
-      dispatch(updateInfoList(data.data))
 
-      setTimeout(()=> {
-        setProcess(`confirmed_infoList`);
-      }, 1000)
+    const period = document.querySelector("#period").value;
+    const word = document.querySelector("#search-text").value;
+    search(word, period, -1, 'infoList');
 
-    }).catch(error=>{
-      console.log(error);
-    })
+
+    // getInfoList().then(data=>{
+    //   dispatch(updateInfoList(data.data))
+
+    //   setTimeout(()=> {
+    //     setProcess(`confirmed_infoList`);
+    //   }, 1000)
+
+    // }).catch(error=>{
+    //   console.log(error);
+    // })
   }
 
 
@@ -175,7 +185,7 @@ function App(props) {
   return (
     <div className="App" style={{display: 'flex', flexFlow: 'column', height: '100vh', position: 'relative'}}>
       
-        <SearchBar search={search} />
+        <SearchBar search={search}  />
         
         <div className='settings-view'>
           <img src={horImg} onClick={onOrientationToggle} alt='orientation'/>

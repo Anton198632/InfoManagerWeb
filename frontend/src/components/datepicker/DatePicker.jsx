@@ -14,7 +14,8 @@ const DatePicker = (props) => {
     const dispatch = useDispatch();
 
     const onChangePeriod = (e) => {
-        dispatch(period(e.target.value))
+        dispatch(period(e.target.value));
+        props.onSearch();
     }
 
 

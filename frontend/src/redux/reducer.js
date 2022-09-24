@@ -1,7 +1,7 @@
 import { infoSort } from "../util/array-sorter"
 
 const fromDate = new Date()
-fromDate.setDate(fromDate.getDate()-1)
+fromDate.setDate(fromDate.getDate())
 
 const initState = {
     period: {

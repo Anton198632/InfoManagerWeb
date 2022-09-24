@@ -10,7 +10,7 @@ const SearchBar = (props) => {
 
     const dispatch = useDispatch()
 
-    const search = () => {
+    const onSearch = () => {
 
         const word = document.querySelector('#search-text').value;
         const period = document.querySelector('#period').value;
@@ -28,7 +28,7 @@ const SearchBar = (props) => {
         }}>
 
             <div style={{marginRight: '10px'}}>
-                <DatePicker id='period' />
+                <DatePicker id='period' onSearch={onSearch} />
             </div>
 
             <div>
@@ -36,7 +36,7 @@ const SearchBar = (props) => {
             </div>
 
             <div style={{marginLeft: '10px'}}>
-                <Button variant="success" onClick={search} >{Names.FIND}</Button>
+                <Button variant="success" onClick={onSearch} >{Names.FIND}</Button>
             </div>
             
         </div>

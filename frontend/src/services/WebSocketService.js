@@ -15,14 +15,10 @@ export const useWebSocketService = () => {
     
     const onMessageHandler = (e) => {
         let data = JSON.parse(e.data);
-        console.log(data);
         const newKey = parseInt(data.event.event)
             if (newKey){
                 messHandler(newKey);
             }
-
-      
-
     }
 
     const setMessageHandler = (messageHandler) => {

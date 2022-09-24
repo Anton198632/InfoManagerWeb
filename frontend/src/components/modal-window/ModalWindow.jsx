@@ -39,7 +39,7 @@ export const ModalWindow = (props) => {
             Thema: setValue('Thema'),
             SourceType: setValue('SourceType'),
             Data: setValue('Data'),
-            WithApplication: '',
+            WithApplication: "",
             Notice: setValue('Notice')
         }
     }
@@ -84,12 +84,26 @@ export const ModalWindow = (props) => {
         .then(data => {
             props.refreshInfoList();
             props.onClose(false);
+            setTimeout(() => {
+                
+            } , duration);
         })
         .catch(error=>{
         console.log(error);
         })
 
         
+    }
+
+    const onCloseFormAfterSubmit = (formik) => {
+        props.onClose(false);
+        setTimeout(() => {
+            
+            formik.setFieldValue('Data', '');
+            formik.setFieldValue('WithApplication', '');
+            
+        }, duration);
+  
     }
 
     const onCloseForm = (formik) => {
@@ -174,7 +188,7 @@ export const ModalWindow = (props) => {
                                                      className="btn btn-danger">{Names.DELETE}</button>
                                                 </div>): null}
                                                 <div>
-                                                    <button type='submit' className="btn btn-success">
+                                                    <button type='submit' onClick={() => onCloseFormAfterSubmit(formik)} className="btn btn-success">
                                                         {props.editInfo === null? Names.ADD : Names.UPDATE}
                                                     </button>
                                                     <button onClick={() => {onCloseForm(formik)}} type='button' className="btn btn-secondary">{Names.CLOSE}</button>

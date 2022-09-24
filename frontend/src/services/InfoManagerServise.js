@@ -30,8 +30,8 @@ const useInfoManagerService = () => {
         return res;
     }
 
-    const getInfoByWord = async (word, period, key=-1) => {
-        const res = await request('infoList',`${address}/getInfoByWord?word=${word}&period=${period}&key=${key}`)
+    const getInfoByWord = async (word, period, key=-1, stateType='infoList') => {
+        const res = await request(stateType,`${address}/getInfoByWord?word=${word}&period=${period}&key=${key}`)
         return res;
     }
 
