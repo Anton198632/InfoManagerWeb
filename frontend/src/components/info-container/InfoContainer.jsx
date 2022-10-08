@@ -18,8 +18,8 @@ const InfoContainer = () => {
     const ps = dataP.map((item, i)=>{
 
         let text = item.split(searchWord);
-        const selectedSearchText = text.map((item, i) => {
-            return i==0? (item) : (<><span className={'search-word'}>{searchWord}</span>{item}</>)
+        const selectedSearchText = text.map((item, j) => {
+            return i==0? (item) : (<><span key={j} className={'search-word'}>{searchWord}</span>{item}</>)
         })
 
         return (

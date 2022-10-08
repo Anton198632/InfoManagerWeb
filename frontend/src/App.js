@@ -30,6 +30,7 @@ import {useWebSocketService} from './services/WebSocketService'
 
 function App(props) {
 
+  const [isWait, setIsWait] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [editInfo, setEditInfo] = useState(null);
   const [fontSize, setFontSize] = useState(1);
@@ -82,17 +83,6 @@ function App(props) {
     const word = document.querySelector("#search-text").value;
     search(word, period, -1, 'infoList');
 
-
-    // getInfoList().then(data=>{
-    //   dispatch(updateInfoList(data.data))
-
-    //   setTimeout(()=> {
-    //     setProcess(`confirmed_infoList`);
-    //   }, 1000)
-
-    // }).catch(error=>{
-    //   console.log(error);
-    // })
   }
 
 
@@ -103,9 +93,16 @@ function App(props) {
 
 
   const setContentTable = (process) => {
+
+    if (isWait) 
+      return (<>{skeletonsTable}</>)
+
+    console.log(process);
+
     switch (process){
         case 'waiting':
         case 'loading_infoList':
+        case 'loading_addInfo':
             return (<>{skeletonsTable}</>)
           
         default:
@@ -160,7 +157,7 @@ function App(props) {
 
     getInfoData(key)
       .then((data)=>{
-        setProcess('confirmed_infoData');
+        //setProcess('confirmed_infoData');
         setEditInfo(data);
         setShowModal(true);
       })
@@ -220,6 +217,7 @@ function App(props) {
         </ReflexContainer>
 
         <ModalWindow editInfo={editInfo} 
+          setIsWait={setIsWait}
           show={showModal} 
           onClose={setShowModal} 
           refreshInfoList={() => refreshInfoList()}/>

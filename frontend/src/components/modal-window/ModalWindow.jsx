@@ -76,17 +76,22 @@ export const ModalWindow = (props) => {
             Key: key
         }, null, 2)
 
+        
+
+        props.setIsWait(true);
 
         addNewInformation(formDataJSON)
         .then(data => { 
            return onUploadFiles(data.key)
         })
         .then(data => {
+            props.setIsWait(false);
             props.refreshInfoList();
             props.onClose(false);
             setTimeout(() => {
                 
             } , duration);
+
         })
         .catch(error=>{
         console.log(error);

@@ -7,6 +7,8 @@ export const useHttp = () => {
 
     const request = useCallback((async (dataType, url, method='GET', body=null,
         headers={ 'Content-Type': 'application/json', }) =>{
+        
+        console.log(`dataType: ${dataType}`);
 
         setProcess(`loading_${dataType}`);
 

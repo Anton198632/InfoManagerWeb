@@ -36,7 +36,7 @@ const useInfoManagerService = () => {
     }
 
     const addNewInformation = async (newInformation) => {
-        const res = await request('infoList', `${address}/addNewInformation`, 'POST', newInformation);
+        const res = await request('addInfo', `${address}/addNewInformation`, 'POST', newInformation);
         return res;
     }
 
