@@ -24,8 +24,6 @@ const InfoTable = (props) => {
 
   useEffect(()=>{
     document.onkeydown = (e) => {
-
-      
       
       let direct = 1;      
       if (e.key === 'ArrowUp')
@@ -37,12 +35,12 @@ const InfoTable = (props) => {
 
       e.preventDefault();
         
-      const trList = document.querySelectorAll('.row-class')
+      const trList = document.querySelectorAll('.row-class');
 
       if (trList.length === 1)
         return;
 
-      let nextRowIndex = selectedRow + direct
+      let nextRowIndex = selectedRow + direct;
       if (nextRowIndex < 1){
         nextRowIndex = trList.length - 1;
       }
@@ -53,7 +51,18 @@ const InfoTable = (props) => {
       getInformationHandler(parent);
 
     }
+
   })
+
+  useEffect(()=> {
+
+    const table = document.querySelector('.left-pane');
+    table.scrollTop = table.scrollHeight - table.clientHeight;
+
+
+  }, [])
+
+
 
   const onClickHandler = (e) => {
 

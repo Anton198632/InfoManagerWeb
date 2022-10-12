@@ -24,3 +24,4 @@ D:\Python\InfoManagerWeb (Django,React,Sharp)\InfoManageAPI\InfoMAPI\obj\Debug\I
 D:\Python\InfoManagerWeb (Django,React,Sharp)\InfoManageAPI\InfoMAPI\obj\Debug\InfoMAPI.csproj.CopyComplete
 D:\Python\InfoManagerWeb (Django,React,Sharp)\InfoManageAPI\InfoMAPI\obj\Debug\InfoMAPI.dll
 D:\Python\InfoManagerWeb (Django,React,Sharp)\InfoManageAPI\InfoMAPI\obj\Debug\InfoMAPI.pdb
+D:\Work\Sharp\InfoManageAPI\InfoMAPI\obj\Debug\InfoMAPI.csprojAssemblyReference.cache

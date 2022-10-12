@@ -59,7 +59,8 @@ function App(props) {
         setProcess(`confirmed_infoList`);
       }, 300) // 1000
 
-    }).catch(error=>{
+    })
+    .catch(error=>{
       console.log(error);
     });
   }  
@@ -96,8 +97,6 @@ function App(props) {
 
     if (isWait) 
       return (<>{skeletonsTable}</>)
-
-    console.log(process);
 
     switch (process){
         case 'waiting':
@@ -209,7 +208,7 @@ function App(props) {
   
                   <ReflexSplitter />
   
-                  <ReflexElement className="right-pane section">
+                  <ReflexElement className="right-pane section" style={{position: "unset"}}>
                     {setInfoContent(process)}
                   </ReflexElement>
   

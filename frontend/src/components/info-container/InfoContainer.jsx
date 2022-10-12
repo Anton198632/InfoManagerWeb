@@ -15,12 +15,51 @@ const InfoContainer = () => {
     let dataP = []
     if (currentInfo)
         dataP = currentInfo.split('\n');
+
+
+
     const ps = dataP.map((item, i)=>{
 
-        let text = item.split(searchWord);
-        const selectedSearchText = text.map((item, j) => {
-            return i==0? (item) : (<><span key={j} className={'search-word'}>{searchWord}</span>{item}</>)
-        })
+        // let text = item.split(searchWord);
+        // const selectedSearchText = text.map((itemText, j) => {
+        //     return j==0? (itemText) 
+        //         : (<><span key={(i+1)*10+j} className={'search-word'}>{searchWord}</span>{itemText}</>)
+        // });
+
+        let selectedSearchText = []
+        if (searchWord!==null && searchWord!==''){
+            const searchWords = searchWord.split(',');
+
+            const reg = new RegExp(`(${searchWords.join(')|(')})`);
+
+            const arrayFragments = item.split(reg);
+            console.log(arrayFragments);
+
+
+            selectedSearchText = arrayFragments.map((itemText, j) => {
+
+                if (itemText !== undefined && itemText !== "") {
+                    
+                return searchWords.includes(itemText) ?
+                 (<><span key={(i+1)*10+j} className={'search-word'}>{itemText}</span></>)
+                 : (<>{itemText}</>);
+                        
+                }
+
+            });
+
+        } else {
+            let text = item.split(searchWord);
+            selectedSearchText = text.map((itemText, j) => {
+                return j==0? (itemText) 
+                    : (<><span key={(i+1)*10+j} className={'search-word'}>{searchWord}</span>{itemText}</>)
+            });
+        }
+
+        
+
+        
+        
 
         return (
             <p key={i}><span className='paragraph'>{selectedSearchText}</span></p>
@@ -50,8 +89,11 @@ const InfoContainer = () => {
     }
 
     return (
-        <div style={{}}>
-            <div id='infoText' className="info-text">{ps}</div>
+        <div>
+            <div>
+                <div id='infoText' className="info-text">{ps}</div>
+            </div>
+            
             <div className='float-button' onClick={() => copyText('infoText')}>
                 <img  src={copyImg}/>
             </div>

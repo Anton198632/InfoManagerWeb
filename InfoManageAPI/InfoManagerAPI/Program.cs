@@ -12,7 +12,12 @@ namespace InfoManagerAPI
     {
         static void Main(string[] args)
         {
-            new InfoMAPI.Database.DBHelper("localhost", @"d:\Python\InfoManagerWeb (Django,React,Sharp)\info_base_v2.ib");
+
+            InfoMAPI.Utils.Coordinates coordinates = new InfoMAPI.Utils.CoordsRecognizer().CoordinatesFind(" ds fs dfs 45.55645 23.435345 ert rthg rt");
+
+            //new InfoMAPI.Database.DBHelper("localhost", @"d:\Python\InfoManagerWeb (Django,React,Sharp)\info_base_v2.ib");
+            
+            
             //String infoListJson = InfoMAPI.Database.DBHelper.GetInfoList(100, 1);
             //string data = InfoMAPI.Database.DBHelper.GetInfoData(2);
             //string data = InfoMAPI.Database.DBHelper.GetInfoListByWorld("пользо", "15.09.2022 - 16.09.2022", 100, 1);
@@ -33,7 +38,9 @@ namespace InfoManagerAPI
 
             //InfoMAPI.Database.DBHelper.UpdateNotice("11", "Hello, WORLD!!!");
 
-            string data = InfoMAPI.Database.DBHelper.GetInfoListByWorld(",,,,", "22.09.2022 - 23.09.2022", 100, 1, 42);
+            //string data = InfoMAPI.Database.DBHelper.GetInfoListByWorld(",,,,", "22.09.2022 - 23.09.2022", 100, 1, 42);
+
+            string data = InfoMAPI.Database.DBHelper.GetInfoListByWorlds("пользо,fg,kl", "15.09.2022 - 16.09.2022", 100, 1);
         }
     }
 }

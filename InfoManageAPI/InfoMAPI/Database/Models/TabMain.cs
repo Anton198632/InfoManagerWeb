@@ -22,6 +22,8 @@ namespace InfoMAPI.Database.Models
         public byte[] Application { get; set; }         //"APPLICATION"	BLOB SUB_TYPE 0 SEGMENT SIZE 80,
         public string WithApplication { get; set; }     //"WITH_APPLICATION"	VARCHAR(200) CHARACTER SET WIN1251 DEFAULT 'no' NOT NULL,
 
+        
+
 
         public static string ToJSON(List<TabMain> rows)
         {
@@ -34,4 +36,7 @@ namespace InfoMAPI.Database.Models
 
         }
     }
+
+
+    
 }
